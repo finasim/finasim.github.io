@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-screen items-center overflow-hidden pt-24"
+      className="relative overflow-hidden pb-16 pt-28 sm:pb-20 sm:pt-32"
     >
       <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-primary/10 via-transparent to-transparent dark:from-primary/20" />
 
@@ -71,9 +71,9 @@ export default function Hero() {
       <a
         href="#about"
         aria-label="Scroll to About section"
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-slate-400 transition hover:text-primary"
+        className="mt-12 flex justify-center text-slate-400 transition hover:text-primary"
       >
-        <ArrowDown size={22} className="animate-bounce" />
+        <ArrowDown size={20} className="animate-bounce" />
       </a>
     </section>
   );

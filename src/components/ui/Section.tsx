@@ -12,7 +12,7 @@ interface SectionProps {
 
 export default function Section({ id, eyebrow, title, description, children, className }: SectionProps) {
   return (
-    <section id={id} className={clsx("scroll-mt-24 py-20 sm:py-28", className)}>
+    <section id={id} className={clsx("scroll-mt-20 py-14 sm:py-20", className)}>
       <div className="mx-auto max-w-6xl px-6">
         <div className="mb-12 max-w-2xl">
           {eyebrow && (
