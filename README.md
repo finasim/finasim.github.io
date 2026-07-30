@@ -1,75 +1,133 @@
-# React + TypeScript + Vite
+# Faysal Islam Nasim Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> Premium recruiter-focused portfolio built with React, TypeScript, Vite
+> and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Vision
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Build a world-class engineering portfolio focused on Salesforce
+Architecture and Development.
 
-## React Compiler
+## Goals
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-   Showcase Salesforce expertise
+-   Highlight architecture and integration skills
+-   Present projects as case studies
+-   Achieve Lighthouse 95+
+-   Deploy on GitHub Pages
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+-   React 19
+-   TypeScript 6
+-   Vite 8
+-   Tailwind CSS v4
+-   Framer Motion
+-   React Router v7
+-   React Helmet Async
+-   EmailJS
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Folder Structure
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+``` text
+src/
+  assets/
+  components/
+    common/
+    layout/
+    sections/
+    ui/
+  data/
+  hooks/
+  layouts/
+  pages/
+  services/
+  styles/
+  types/
+  utils/
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Main Sections
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1.  Hero
+2.  About
+3.  Skills
+4.  Experience
+5.  Projects
+6.  Certifications
+7.  GitHub Activity
+8.  Resume
+9.  Contact
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Architecture
 
-```
+Use a data-driven architecture. Store content in:
+
+-   profile.ts
+-   projects.ts
+-   experience.ts
+-   certifications.ts
+-   skills.ts
+-   social.ts
+
+Components should render data instead of hardcoding content.
+
+## UI Guidelines
+
+-   Apple/Vercel inspired
+-   Dark & Light mode
+-   Glassmorphism
+-   Responsive
+-   Accessible
+-   Smooth animations
+
+## Roadmap
+
+### Phase 1
+
+-   Project setup
+-   Theme
+-   Routing
+-   Layout
+
+### Phase 2
+
+-   Navbar
+-   Hero
+-   Footer
+
+### Phase 3
+
+-   About
+-   Skills
+-   Experience
+
+### Phase 4
+
+-   Projects
+-   Certifications
+-   Resume
+
+### Phase 5
+
+-   Contact
+-   SEO
+-   GitHub Pages
+-   Performance optimization
+
+## Personalization
+
+-   Faysal Islam Nasim
+-   Senior Salesforce Developer
+-   Platform Integration Architect
+-   6+ Years Experience
+-   Salesforce Certified Platform Integration Architect
+-   Salesforce Platform Developer II
+-   Salesforce Platform Developer I
+-   Salesforce Administrator
+
+## Success Criteria
+
+Within 30 seconds a recruiter should understand: - Who you are - Your
+specialization - Your certifications - Your best projects - How to
+contact you
