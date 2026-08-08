@@ -42,7 +42,7 @@ function ProjectGrid({ items, startDelay = 0 }: { items: Project[]; startDelay?:
           </div>
 
           <h3 className="font-heading text-xl font-bold text-slate-900 dark:text-white">
-            {project.title}
+            <span lang={project.titleLang}>{project.title}</span>
             {project.version && (
               <span className="ml-2 align-middle text-xs font-medium text-slate-400 dark:text-slate-500">
                 v{project.version}

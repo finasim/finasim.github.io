@@ -27,6 +27,7 @@ export const projects: Project[] = [
   {
     slug: "lcm-gcd-calculator",
     title: "ল.সা.গু - গ.সা.গু Calculator",
+    titleLang: "bn",
     category: "product",
     typeLabels: ["Android", "App"],
     summary: "A simple, fast calculator app for LCM, GCD, and base conversion.",

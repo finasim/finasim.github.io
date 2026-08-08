@@ -5,9 +5,11 @@ import { profile } from "@/data/profile";
 import { certifications } from "@/data/certifications";
 import { experience } from "@/data/experience";
 
+const salesforceCertCount = certifications.filter((c) => c.issuer === "Salesforce").length;
+
 const facts = [
   { icon: Briefcase, label: "Years of experience", value: `${profile.yearsExperience}+` },
-  { icon: Award, label: "Salesforce certifications", value: `${certifications.length - 1}` },
+  { icon: Award, label: "Salesforce certifications", value: `${salesforceCertCount}` },
   { icon: MapPin, label: "Based in", value: profile.location },
 ];
 

@@ -7,19 +7,19 @@ export interface Experience {
   company: string;
   role: string;
   period: string;
-  location?: string;
   highlights: string[];
 }
 
 export interface Certification {
   name: string;
   issuer: string;
-  year?: string;
 }
 
 export interface Project {
   slug: string;
   title: string;
+  /** BCP-47 tag when the title isn't English, e.g. "bn". Used for screen readers. */
+  titleLang?: string;
   category: "product" | "case-study";
   typeLabels?: string[];
   version?: string;
