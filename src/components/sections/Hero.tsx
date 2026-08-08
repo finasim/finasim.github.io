@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Download, Mail } from "lucide-react";
 import { profile } from "@/data/profile";
-// import heroImage from "@/assets/hero.png";
 import heroImage from "@/assets/profile-image.png";
 
 export default function Hero() {
