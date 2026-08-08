@@ -22,3 +22,30 @@ body {
   background: #2563eb;
   border-radius: 999px;
 }
+
+/* Visible keyboard focus for every interactive element.
+   :focus-visible keeps this off for mouse clicks. */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Respect users who ask the OS to reduce motion. Framer Motion is handled
+   separately via <MotionConfig reducedMotion="user"> in main.tsx. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

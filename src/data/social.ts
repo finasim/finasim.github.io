@@ -1,6 +1,5 @@
 import type { SocialLink } from "@/types";
 
-// TODO: replace placeholder GitHub/LinkedIn URLs with your real profiles.
 export const socialLinks: SocialLink[] = [
   { name: "GitHub", url: "https://github.com/finasim", icon: "github" },
   { name: "LinkedIn", url: "https://linkedin.com/in/finasim", icon: "linkedin" },

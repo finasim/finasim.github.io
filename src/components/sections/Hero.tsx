@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowDown, Download, Mail } from "lucide-react";
 import { profile } from "@/data/profile";
-import heroImage from "@/assets/profile-image.png";
+import heroImage from "@/assets/profile-image.jpg";
 
 export default function Hero() {
   return (
@@ -61,7 +61,11 @@ export default function Hero() {
           <div className="absolute -inset-6 -z-10 rounded-full bg-gradient-to-br from-primary/30 to-secondary/30 blur-3xl" />
           <img
             src={heroImage}
-            alt={profile.name}
+            alt={`Portrait of ${profile.name}`}
+            width={800}
+            height={800}
+            fetchPriority="high"
+            decoding="async"
             className="aspect-square w-full rounded-3xl object-cover shadow-2xl ring-1 ring-slate-200 dark:ring-slate-800"
           />
         </motion.div>
