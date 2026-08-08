@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Download, Mail, Phone } from "lucide-react";
+import { Download, Mail, Mountain, Phone } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import Section from "@/components/ui/Section";
 import { profile } from "@/data/profile";
@@ -8,6 +8,7 @@ import { socialLinks } from "@/data/social";
 export default function Contact() {
   const github = socialLinks.find((s) => s.icon === "github");
   const linkedin = socialLinks.find((s) => s.icon === "linkedin");
+  const trailblazer = socialLinks.find((s) => s.icon === "trailblazer");
 
   return (
     <Section
@@ -84,6 +85,21 @@ export default function Contact() {
             <div>
               <p className="text-sm text-slate-500 dark:text-slate-400">GitHub</p>
               <p className="font-medium text-slate-900 dark:text-white">View my code</p>
+            </div>
+          </a>
+        )}
+
+        {trailblazer && (
+          <a
+            href={trailblazer.url}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-6 transition hover:border-primary dark:border-slate-800 dark:bg-surface-card"
+          >
+            <Mountain className="text-primary" size={22} />
+            <div>
+              <p className="text-sm text-slate-500 dark:text-slate-400">Trailblazer</p>
+              <p className="font-medium text-slate-900 dark:text-white">View my profile</p>
             </div>
           </a>
         )}

@@ -8,5 +8,5 @@ export const certifications: Certification[] = [
   { name: "Salesforce Certified Agentforce Specialist", issuer: "Salesforce" },
   { name: "Salesforce Certified Data Cloud Consultant", issuer: "Salesforce" },
   { name: "Salesforce Marketing Cloud Email Specialist", issuer: "Salesforce" },
-  { name: "SCRUM Team Member Accredited Certification", issuer: "SCRUMstudy" },
+  { name: "SCRUM Team Member Accredited Certification", issuer: "International Scrum Institute" },
 ];

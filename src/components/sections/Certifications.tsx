@@ -8,7 +8,7 @@ export default function Certifications() {
     <Section
       id="certifications"
       eyebrow="Certifications"
-      title="Salesforce credentials"
+      title="Salesforce Credentials"
       description="Certified across architecture, development, administration, AI, and marketing automation."
     >
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
