@@ -1,4 +1,4 @@
-import { Mail, Compass } from "lucide-react";
+import { Mail, Mountain } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { profile } from "@/data/profile";
 import { socialLinks } from "@/data/social";
@@ -7,7 +7,7 @@ const iconMap = {
   github: FaGithub,
   linkedin: FaLinkedin,
   mail: Mail,
-  trailblazer: Compass,
+  trailblazer: Mountain,
 };
 
 export default function Footer() {
@@ -20,7 +20,7 @@ export default function Footer() {
 
         <div className="flex items-center gap-4">
           {socialLinks.map((link) => {
-            const Icon = iconMap[link.icon as keyof typeof iconMap] ?? Compass;
+            const Icon = iconMap[link.icon as keyof typeof iconMap] ?? Mountain;
             return (
               <a
                 key={link.name}
