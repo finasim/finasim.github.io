@@ -2,8 +2,54 @@ import type { Project } from "@/types";
 
 export const projects: Project[] = [
   {
+    slug: "sf-dependency-checker",
+    title: "SF Dependency Checker",
+    category: "product",
+    typeLabels: ["Salesforce", "Managed Package", "2GP"],
+    version: "1.5",
+    summary:
+      "Finds every place a field, object, or metadata component is used across your org — before you deprecate or delete it.",
+    problem:
+      "No fast way to see where a field, object, or metadata component is used.",
+    solution:
+      "A managed package that scans org metadata and surfaces every dependency for a component in one Lightning Web Component view.",
+    impact: [
+      "Reduced risk of breaking changes by identifying all dependencies before deletion or modification",
+      "Saved time for admins and developers by providing a single view of dependencies instead of searching through multiple tools",
+      "Improved org health by making it easier to clean up unused fields and components",
+    ],
+    stack: ["Apex", "LWC", "Rest API", "Named Credentials", "OAuth", "External Client App", "Custom Objects", "Custom Metadata Types"],
+    featured: true,
+    liveLabel: "Install Package",
+    liveUrl:
+      "https://login.salesforce.com/packaging/installPackage.apexp?p0=04tg5000000CYYzAAO",
+  },
+  {
+    slug: "lcm-gcd-calculator",
+    title: "ল.সা.গু - গ.সা.গু Calculator",
+    category: "product",
+    typeLabels: ["Android", "App"],
+    summary: "A simple, fast calculator app for LCM, GCD, and base conversion.",
+    problem:
+      "Students and everyday users needed a quick, no-friction way to calculate LCM, GCD, and number base conversions on the go.",
+    solution:
+      "Built a lightweight Flutter app focused on speed and simplicity for these everyday math calculations.",
+    impact: [
+      "Improved accessibility to quick math calculations for students and everyday users",
+      "Provided a user-friendly interface that reduces friction in performing calculations",
+      "Enhanced learning and understanding of LCM, GCD, Base Conversion concepts through practical application",
+      "Increased engagement with math concepts by providing a convenient tool for practice and learning",
+    ],
+    stack: ["Flutter", "Dart", "Android", "iOS", "Google Play Store", "App Store", "Git", "GitHub"],
+    featured: true,
+    liveLabel: "Play Store",
+    liveUrl: "https://play.google.com/store/apps/details?id=com.apps.finstudio.lcmgcdcalculator",
+  },
+  {
     slug: "enterprise-rest-integration",
     title: "Enterprise REST API Integration Layer",
+    category: "case-study",
+    typeLabels: ["Salesforce", "Case Study"],
     summary:
       "Connected Salesforce to third-party enterprise systems with a reusable, secure integration framework.",
     problem:
@@ -21,6 +67,8 @@ export const projects: Project[] = [
   {
     slug: "agentforce-ai-automation",
     title: "Agentforce-Powered Service Automation",
+    category: "case-study",
+    typeLabels: ["Salesforce", "Case Study"],
     summary:
       "Introduced AI-driven automation using Agentforce to reduce manual triage in day-to-day service workflows.",
     problem:
@@ -38,6 +86,8 @@ export const projects: Project[] = [
   {
     slug: "declarative-automation-overhaul",
     title: "Declarative Automation & Access Model Overhaul",
+    category: "case-study",
+    typeLabels: ["Salesforce", "Case Study"],
     summary:
       "Rebuilt sprawling legacy automation and sharing rules into a clean, governed declarative model.",
     problem:
@@ -54,6 +104,8 @@ export const projects: Project[] = [
   {
     slug: "sales-service-cloud-configuration",
     title: "Sales & Service Cloud Configuration for Growing Teams",
+    category: "case-study",
+    typeLabels: ["Salesforce", "Case Study"],
     summary:
       "Configured Sales Cloud and Service Cloud, plus supporting LWC components, for evolving business processes.",
     problem:

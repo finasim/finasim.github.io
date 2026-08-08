@@ -20,12 +20,17 @@ export interface Certification {
 export interface Project {
   slug: string;
   title: string;
+  category: "product" | "case-study";
+  typeLabels?: string[];
+  version?: string;
   summary: string;
   problem: string;
   solution: string;
   impact: string[];
   stack: string[];
   featured?: boolean;
+  liveUrl?: string;
+  liveLabel?: string;
 }
 
 export interface SocialLink {
