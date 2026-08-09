@@ -1,18 +1,18 @@
 # Faysal Islam Nasim Portfolio Website
 
-> Premium recruiter-focused portfolio built with React, TypeScript, Vite
-> and Tailwind CSS.
+> Recruiter-focused portfolio built with React, TypeScript, Vite and
+> Tailwind CSS. Deployed at [finasim.github.io](https://finasim.github.io/).
 
 ## Vision
 
-Build a world-class engineering portfolio focused on Salesforce
-Architecture and Development.
+A world-class engineering portfolio focused on Salesforce Architecture
+and Development.
 
 ## Goals
 
 -   Showcase Salesforce expertise
 -   Highlight architecture and integration skills
--   Present projects as case studies
+-   Present real shipped products alongside representative case studies
 -   Achieve Lighthouse 95+
 -   Deploy on GitHub Pages
 
@@ -21,30 +21,36 @@ Architecture and Development.
 -   React 19
 -   TypeScript 6
 -   Vite 8
--   Tailwind CSS v4
+-   Tailwind CSS v3 (PostCSS)
 -   Framer Motion
--   React Router v7
+-   React Router v7 (single route; used for `BrowserRouter` conventions,
+    not multi-page navigation)
 -   React Helmet Async
--   EmailJS
+-   lucide-react + react-icons (icons)
+-   clsx (conditional classNames)
+-   Self-hosted fonts via `@fontsource` (Inter, Space Grotesk)
+
+No backend, CMS, or third-party API integration — see
+[docs/api-design.md](docs/api-design.md).
 
 ## Folder Structure
 
 ``` text
 src/
-  assets/
+  assets/            # images
   components/
-    common/
-    layout/
-    sections/
-    ui/
-  data/
-  hooks/
-  layouts/
-  pages/
-  services/
-  styles/
-  types/
-  utils/
+    common/          # SEO, ThemeToggle
+    layout/          # Navbar, Footer
+    sections/        # Hero, About, Skills, Experience, Projects,
+                      # Certifications, Contact
+    ui/              # shared building blocks (Section)
+  context/           # ThemeContext (dark/light mode)
+  data/              # content — see Architecture below
+  hooks/             # useTheme
+  types/             # shared TypeScript interfaces
+  App.tsx
+  main.tsx
+  index.css
 ```
 
 ## Main Sections
@@ -53,81 +59,58 @@ src/
 2.  About
 3.  Skills
 4.  Experience
-5.  Projects
+5.  Projects (Products + Case Studies)
 6.  Certifications
-7.  GitHub Activity
-8.  Resume
-9.  Contact
+7.  Contact
+
+Resume download is a CTA button in Hero/Contact, not a standalone
+section.
 
 ## Architecture
 
-Use a data-driven architecture. Store content in:
+Data-driven: content lives in `src/data/*.ts`, components render it.
 
--   profile.ts
--   projects.ts
--   experience.ts
--   certifications.ts
--   skills.ts
--   social.ts
+-   `profile.ts`
+-   `experience.ts`
+-   `certifications.ts`
+-   `skills.ts`
+-   `social.ts`
+-   `projects.ts`
 
 Components should render data instead of hardcoding content.
 
 ## UI Guidelines
 
 -   Apple/Vercel inspired
--   Dark & Light mode
--   Glassmorphism
+-   Dark & light mode (class-based, persisted to `localStorage`)
+-   Glassmorphism navbar (backdrop blur on scroll)
 -   Responsive
--   Accessible
--   Smooth animations
+-   Accessible (focus-visible rings, `prefers-reduced-motion` support)
+-   Motion via Framer Motion, respecting reduced-motion preference
 
-## Roadmap
+## Status
 
-### Phase 1
+All phases below are built and deployed.
 
--   Project setup
--   Theme
--   Routing
--   Layout
+-   [x] Project setup, theme, routing, layout
+-   [x] Navbar, Hero, Footer
+-   [x] About, Skills, Experience
+-   [x] Projects (Products + Case Studies), Certifications, Resume CTA
+-   [x] Contact, SEO, GitHub Pages deployment, performance pass
 
-### Phase 2
-
--   Navbar
--   Hero
--   Footer
-
-### Phase 3
-
--   About
--   Skills
--   Experience
-
-### Phase 4
-
--   Projects
--   Certifications
--   Resume
-
-### Phase 5
-
--   Contact
--   SEO
--   GitHub Pages
--   Performance optimization
+See [docs/future-roadmap.md](docs/future-roadmap.md) for what's next.
 
 ## Personalization
 
 -   Faysal Islam Nasim
--   Senior Salesforce Developer
--   Platform Integration Architect
+-   Salesforce Developer & Platform Integration Architect
 -   6+ Years Experience
--   Salesforce Certified Platform Integration Architect
--   Salesforce Platform Developer II
--   Salesforce Platform Developer I
--   Salesforce Administrator
+-   Certifications: Platform Integration Architect, Platform Developer II,
+    Platform Developer I, Administrator, Agentforce Specialist, Data Cloud
+    Consultant, Marketing Cloud Email Specialist, SCRUM Team Member
 
 ## Success Criteria
 
-Within 30 seconds a recruiter should understand: - Who you are - Your
-specialization - Your certifications - Your best projects - How to
-contact you
+Within 30 seconds a recruiter should understand: who you are, your
+specialization, your certifications, your best projects, and how to
+contact you.
