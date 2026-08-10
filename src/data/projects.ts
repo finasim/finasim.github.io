@@ -1,4 +1,6 @@
 import type { Project } from "@/types";
+import googlePlayBadge from "@/assets/store-badges/google-play-badge.png";
+import salesforceInstallBadge from "@/assets/store-badges/salesforce-install-badge.png";
 
 export const projects: Project[] = [
   {
@@ -23,6 +25,7 @@ export const projects: Project[] = [
     liveLabel: "Install Package",
     liveUrl:
       "https://login.salesforce.com/packaging/installPackage.apexp?p0=04tg5000000CYYzAAO",
+    liveBadgeImage: salesforceInstallBadge,
   },
   {
     slug: "lcm-gcd-calculator",
@@ -45,6 +48,7 @@ export const projects: Project[] = [
     featured: true,
     liveLabel: "Play Store",
     liveUrl: "https://play.google.com/store/apps/details?id=com.apps.finstudio.lcmgcdcalculator",
+    liveBadgeImage: googlePlayBadge,
   },
   {
     slug: "enterprise-rest-integration",

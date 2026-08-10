@@ -44,6 +44,8 @@ export interface Project {
   featured?: boolean;
   liveUrl?: string;
   liveLabel?: string;
+  /** Official store badge image (e.g. Google Play) shown instead of the text pill. */
+  liveBadgeImage?: string;
 }
 
 export interface SocialLink {

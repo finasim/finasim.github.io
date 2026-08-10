@@ -85,15 +85,30 @@ function ProjectGrid({ items, startDelay = 0 }: { items: Project[]; startDelay?:
           </div>
           {project.liveUrl && (
             <div className="mt-auto flex justify-end pt-4">
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex w-fit items-center gap-1 rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent transition hover:bg-accent/20"
-              >
-                {project.liveLabel ?? "Live"}
-                <ExternalLink size={12} />
-              </a>
+              {project.liveBadgeImage ? (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={project.liveLabel ?? "Live"}
+                >
+                  <img
+                    src={project.liveBadgeImage}
+                    alt={project.liveLabel ?? "Live"}
+                    className="h-10 w-32 object-contain object-right"
+                  />
+                </a>
+              ) : (
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex w-fit items-center gap-1 rounded-full bg-accent/10 px-3 py-1 text-xs font-semibold text-accent transition hover:bg-accent/20"
+                >
+                  {project.liveLabel ?? "Live"}
+                  <ExternalLink size={12} />
+                </a>
+              )}
             </div>
           )}
         </motion.article>
