@@ -13,6 +13,19 @@ export interface Experience {
 export interface Certification {
   name: string;
   issuer: string;
+  badgeImage?: string;
+  /** Small disclosure caption shown under the badge, e.g. for an AI-generated logo. */
+  note?: string;
+  /** 0-100. When set, the badge renders blurred with a circular progress overlay (not yet earned). */
+  progress?: number;
+}
+
+export interface AgentblazerBadge {
+  name: string;
+  description: string;
+  badgeImage: string;
+  /** 0-100. When set, the badge renders blurred with a circular progress overlay (not yet earned). */
+  progress?: number;
 }
 
 export interface Project {
