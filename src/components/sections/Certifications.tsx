@@ -96,7 +96,7 @@ export default function Certifications() {
           <BadgeCard
             key={cert.name}
             name={cert.name}
-            // subtitle={cert.issuer}
+            subtitle={cert.issuer}
             badgeImage={cert.badgeImage}
             progress={cert.progress}
             delay={i * 0.04}
@@ -131,7 +131,7 @@ export default function Certifications() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <BadgeCard
             name={scrumCertification.name}
-            // subtitle={scrumCertification.issuer}
+            subtitle={scrumCertification.issuer}
             badgeImage={scrumCertification.badgeImage}
             note={scrumCertification.note}
             progress={scrumCertification.progress}
