@@ -29,7 +29,12 @@ export default function Footer() {
                 target={link.url.startsWith("mailto:") ? undefined : "_blank"}
                 rel="noreferrer"
                 aria-label={link.name}
-                whileHover={{ scale: 1.15, y: -3 }}
+                initial={{ scale: 1, y: 0, boxShadow: "0 0 0 0 rgba(37, 99, 235, 0)" }}
+                whileHover={{
+                  scale: 1.15,
+                  y: -3,
+                  boxShadow: "0 0 18px 4px rgba(37, 99, 235, 0.45)",
+                }}
                 whileTap={{ scale: 0.9 }}
                 transition={{ type: "spring", stiffness: 400, damping: 15 }}
                 className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-600 transition-colors hover:border-primary hover:text-primary dark:border-slate-700 dark:text-slate-300"

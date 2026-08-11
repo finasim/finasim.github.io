@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import clsx from "clsx";
 import ThemeToggle from "@/components/common/ThemeToggle";
@@ -90,12 +91,20 @@ export default function Navbar() {
 
         <div className="hidden items-center gap-4 md:flex">
           <ThemeToggle />
-          <a
+          <motion.a
             href="#contact"
-            className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white transition hover:bg-primary/90"
+            initial={{ boxShadow: "0 0 0 0 rgba(37, 99, 235, 0)" }}
+            whileHover={{
+              scale: 1.08,
+              y: -3,
+              boxShadow: "0 0 18px 4px rgba(37, 99, 235, 0.45)",
+            }}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: "spring", stiffness: 400, damping: 15 }}
+            className="rounded-full bg-primary px-5 py-2 text-sm font-semibold text-white transition-colors hover:bg-primary/90"
           >
             Let's talk
-          </a>
+          </motion.a>
         </div>
 
         <div className="flex items-center gap-3 md:hidden">

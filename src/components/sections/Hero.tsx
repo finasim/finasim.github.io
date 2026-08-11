@@ -34,21 +34,37 @@ export default function Hero() {
           </p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
-            <a
+            <motion.a
               href={profile.resumeUrl}
               download
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-primary/90"
+              initial={{ boxShadow: "0 0 0 0 rgba(37, 99, 235, 0)" }}
+              whileHover={{
+                scale: 1.08,
+                y: -3,
+                boxShadow: "0 0 18px 4px rgba(37, 99, 235, 0.45)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 400, damping: 15 }}
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary/90"
             >
               <Download size={16} />
               Download Resume
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:border-primary hover:text-primary dark:border-slate-700 dark:text-slate-200"
+              initial={{ boxShadow: "0 0 0 0 rgba(37, 99, 235, 0)" }}
+              whileHover={{
+                scale: 1.08,
+                y: -3,
+                boxShadow: "0 0 18px 4px rgba(37, 99, 235, 0.45)",
+              }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: "spring", stiffness: 400, damping: 15 }}
+              className="inline-flex items-center gap-2 rounded-full border border-slate-300 px-6 py-3 text-sm font-semibold text-slate-700 transition-colors hover:border-primary hover:text-primary dark:border-slate-700 dark:text-slate-200"
             >
               <Mail size={16} />
               Get in Touch
-            </a>
+            </motion.a>
           </div>
         </motion.div>
 

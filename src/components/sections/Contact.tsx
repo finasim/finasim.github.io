@@ -10,17 +10,19 @@ const cardClassName =
 
 const cardVariants = {
   rest: {
+    scale: 1,
     y: 0,
-    boxShadow: "0 0 0 rgba(15, 23, 42, 0)",
+    boxShadow: "0 0 0 0 rgba(37, 99, 235, 0)",
   },
   hover: {
-    y: -4,
-    boxShadow:
-      "0 10px 25px -5px rgba(15, 23, 42, 0.1), 0 8px 10px -6px rgba(15, 23, 42, 0.1)",
+    scale: 1.03,
+    y: -3,
+    boxShadow: "0 0 24px 2px rgba(37, 99, 235, 0.25)",
   },
 };
 
-const cardTap = { scale: 0.97 };
+const cardTap = { scale: 0.95 };
+const cardTransition = { type: "spring", stiffness: 400, damping: 15 } as const;
 
 const iconVariants = {
   rest: { scale: 1 },
@@ -54,6 +56,7 @@ export default function Contact() {
           whileHover="hover"
           whileTap={cardTap}
           variants={cardVariants}
+          transition={cardTransition}
         >
           <motion.span variants={iconVariants}>
             <Mail className="text-primary" size={22} />
@@ -71,6 +74,7 @@ export default function Contact() {
           whileHover="hover"
           whileTap={cardTap}
           variants={cardVariants}
+          transition={cardTransition}
         >
           <motion.span variants={iconVariants}>
             <Phone className="text-primary" size={22} />
@@ -89,6 +93,7 @@ export default function Contact() {
           whileHover="hover"
           whileTap={cardTap}
           variants={cardVariants}
+          transition={cardTransition}
         >
           <motion.span variants={iconVariants}>
             <Download className="text-primary" size={22} />
@@ -109,6 +114,7 @@ export default function Contact() {
             whileHover="hover"
             whileTap={cardTap}
             variants={cardVariants}
+            transition={cardTransition}
           >
             <motion.span variants={iconVariants}>
               <FaLinkedin className="text-primary" size={22} />
@@ -130,6 +136,7 @@ export default function Contact() {
             whileHover="hover"
             whileTap={cardTap}
             variants={cardVariants}
+            transition={cardTransition}
           >
             <motion.span variants={iconVariants}>
               <FaGithub className="text-primary" size={22} />
@@ -151,6 +158,7 @@ export default function Contact() {
             whileHover="hover"
             whileTap={cardTap}
             variants={cardVariants}
+            transition={cardTransition}
           >
             <motion.span variants={iconVariants}>
               <Mountain className="text-primary" size={22} />
