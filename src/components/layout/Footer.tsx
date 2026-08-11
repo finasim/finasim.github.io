@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Mail, Mountain } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { profile } from "@/data/profile";
@@ -22,16 +23,19 @@ export default function Footer() {
           {socialLinks.map((link) => {
             const Icon = iconMap[link.icon as keyof typeof iconMap] ?? Mountain;
             return (
-              <a
+              <motion.a
                 key={link.name}
                 href={link.url}
                 target={link.url.startsWith("mailto:") ? undefined : "_blank"}
                 rel="noreferrer"
                 aria-label={link.name}
-                className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-600 transition hover:border-primary hover:text-primary dark:border-slate-700 dark:text-slate-300"
+                whileHover={{ scale: 1.15, y: -3 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                className="flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-600 transition-colors hover:border-primary hover:text-primary dark:border-slate-700 dark:text-slate-300"
               >
                 <Icon size={16} />
-              </a>
+              </motion.a>
             );
           })}
         </div>
