@@ -4,7 +4,7 @@ import innovator from "@/assets/badges/Agentblazer-Level-2-Innovator.png";
 import legend from "@/assets/badges/Agentblazer-Level-3-Legend.png";
 
 // Edit this to update the in-progress percentage shown on the Legend badge.
-const LEGEND_PROGRESS = 34;
+const LEGEND_PROGRESS = 50;
 
 export const agentblazerBadges: AgentblazerBadge[] = [
   {
